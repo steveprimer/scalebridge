@@ -580,9 +580,9 @@ To help service-based and eCommerce businesses save time, convert more, and scal
                     key={idx}
                     onClick={() => handleSend(q)}
                     style={{
-                      backgroundColor: "#1f2a55",
+                      backgroundColor: "#551f53ff",
                       color: "#f4f4f4ff",
-                      border: "1px solid rgba(37,99,235,0.4)",
+                      border: "1px solid rgba(225, 37, 235, 0.4)",
 
                       padding: "6px 10px",
                       borderRadius: "12px",
