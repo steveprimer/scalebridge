@@ -9,8 +9,6 @@ import Footer from "./components/Footer";
 import OurWork from "./components/OurWork";
 import Chatbot from "./components/Chatbot";
 import DeveloperSection from "./components/DeveloperSection";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
