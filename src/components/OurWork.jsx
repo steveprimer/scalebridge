@@ -21,7 +21,6 @@ const OurWork = () => {
       image: rentalCentralImg,
       link: "https://r3ntal-central.netlify.app",
     },
-
     {
       title: "Aromatte Luxe",
       description:
@@ -29,7 +28,6 @@ const OurWork = () => {
       image: aromatteImg,
       link: "https://aromatteluxe.netlify.app",
     },
-
     {
       title: "AI Customer Support Bot",
       description:
@@ -49,28 +47,32 @@ const OurWork = () => {
   return (
     <section
       id="work"
-      className="bg-gradient-to-r from-black via-[#001233] to-black
- text-white py-20"
+      className="bg-gradient-to-r from-black via-[#001233] to-black text-white py-16 sm:py-20"
     >
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-10 sm:mb-12">
           Our <span className="text-blue-400">Work</span>
         </h2>
-        <div className="grid md:grid-cols-2 gap-8">
+
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 sm:gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-[#0f172a] border border-blue-800/40 rounded-xl shadow-md hover:shadow-blue-700 transition-shadow duration-700 ease-in-out text-left p-6"
+              className="bg-[#0f172a] border border-blue-800/40 rounded-xl shadow-md hover:shadow-blue-700 transition-shadow duration-700 ease-in-out text-left p-4 sm:p-6"
               data-aos="fade-up"
               data-aos-delay={index * 50}
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className="rounded-md mb-4 w-full h-48 object-cover"
+                className="rounded-md mb-3 sm:mb-4 w-full h-40 sm:h-48 object-cover"
               />
-              <h3 className="text-xl font-semibold ">{project.title}</h3>
-              <p className="text-gray-100 mt-2">{project.description}</p>
+              <h3 className="text-lg sm:text-xl font-semibold">
+                {project.title}
+              </h3>
+              <p className="text-sm sm:text-base text-gray-100 mt-2 line-clamp-3 sm:line-clamp-none">
+                {project.description}
+              </p>
               <a
                 href={project.link}
                 target="_blank"

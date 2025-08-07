@@ -2,23 +2,26 @@ import React, { useEffect } from "react";
 // import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Services from "./components/Services"; 
-import Testimonials from "./components/Testimonials"; 
+import Services from "./components/Services";
+import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import OurWork from "./components/OurWork";
 import Chatbot from "./components/Chatbot";
+import DeveloperSection from "./components/DeveloperSection";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
 function App() {
   useEffect(() => {
-  AOS.init({
-    duration: 1500, // ms
-    once: true,    // animate only once
-  });
-}, []);
+    AOS.init({
+      duration: 1500, // ms
+      once: true, // animate only once
+    });
+  }, []);
   return (
     <>
       {/* <Navbar />  */}
@@ -27,6 +30,7 @@ function App() {
       <Services />
       <OurWork />
       <Testimonials />
+      <DeveloperSection />
       <Contact />
       <Chatbot />
       <Footer />
