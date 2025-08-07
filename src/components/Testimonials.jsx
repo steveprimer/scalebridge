@@ -28,15 +28,14 @@ const Testimonials = () => {
     dots: true,
     infinite: true,
     autoplay: true,
-
     speed: 1000,
     autoplaySpeed: 4000,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true,
     responsive: [
       {
-        breakpoint: 768, // mobile and small tablets
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           arrows: false,
