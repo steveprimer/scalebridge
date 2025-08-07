@@ -1,6 +1,10 @@
 // src/components/Testimonials.jsx
 import React from "react";
-import Slider from "react-slick";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 const testimonials = [
   {
@@ -24,26 +28,6 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    autoplay: true,
-    speed: 1000,
-    autoplaySpeed: 4000,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          arrows: false,
-        },
-      },
-    ],
-  };
-
   return (
     <section
       id="testimonials"
@@ -53,19 +37,32 @@ const Testimonials = () => {
         <h2 className="text-4xl font-bold mb-12">
           What Our <span className="text-blue-400">Clients</span> Say
         </h2>
-        <Slider {...settings}>
+
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          spaceBetween={20}
+          slidesPerView={1}
+          loop={true}
+          autoplay={{ delay: 4000 }}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            768: {
+              slidesPerView: 3,
+            },
+          }}
+        >
           {testimonials.map((t, index) => (
-            <div key={index} className="px-4">
-              <div className="bg-[#0f172a] border border-blue-800/40 rounded-xl shadow-md hover:shadow-blue-700 transition-shadow duration-700 ease-in-out text-left p-6 h-full">
+            <SwiperSlide key={index}>
+              <div className="bg-[#0f172a] border border-blue-800/40 rounded-xl shadow-md hover:shadow-blue-700 transition-shadow duration-700 ease-in-out text-left p-6 max-w-sm mx-auto h-full">
                 <p className="text-gray-100 italic mb-4">“{t.quote}”</p>
                 <h4 className="text-lg font-semibold text-blue-600">
                   {t.name}
                 </h4>
                 <p className="text-sm text-gray-100">{t.position}</p>
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </Slider>
+        </Swiper>
       </div>
     </section>
   );
