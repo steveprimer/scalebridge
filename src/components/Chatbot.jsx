@@ -178,8 +178,8 @@ To help service-based and eCommerce businesses save time, convert more, and scal
         <div
           style={{
             position: "fixed",
-            bottom: "100px",
-            right: "20px",
+            bottom: "20px",
+            right: "100px",
             backgroundColor: "#0f111a",
             padding: "12px 16px",
             borderRadius: "12px",

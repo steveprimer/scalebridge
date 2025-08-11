@@ -1,34 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
-  const [status, setStatus] = useState("");
+  const whatsappNumber = "+918929838874";
+  const whatsappMessage = "Hi, I'm interested in your services at ScaleBridge!";
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const form = e.target;
-
-    const data = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value,
-    };
-
-    const res = await fetch("https://formspree.io/f/mblyewkq", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (res.ok) {
-      setStatus("Thanks! Your message has been sent.");
-      form.reset();
-    } else {
-      setStatus("Oops! Something went wrong.");
-    }
-  };
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
 
   return (
     <section
@@ -38,40 +17,20 @@ const Contact = () => {
       <div className="bg-gradient-to-b from-transparent via-transparent to-black py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-4xl font-bold mb-8">
-            Get in <span className="text-blue-400">Touch</span>
+            Get in <span className="text-green-400">Touch</span>
           </h2>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="flex flex-col md:flex-row gap-6">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                required
-                className="w-full p-3 rounded-md border border-gray-300 text-gray-900"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required
-                className="w-full p-3 rounded-md border border-gray-300 text-gray-900"
-              />
-            </div>
-            <textarea
-              name="message"
-              rows="5"
-              placeholder="Your Message"
-              required
-              className="w-full p-3 rounded-md border border-gray-300 text-gray-900"
-            />
-            <button
-              type="submit"
-              className="laser-button bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg text-lg cursor-pointer"
-            >
-              Send Message
-            </button>
-            {status && <p className="mt-4 text-green-600">{status}</p>}
-          </form>
+          <p className="mb-6 text-lg text-gray-300">
+            Click below to start a WhatsApp chat with us instantly.
+          </p>
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg text-lg font-semibold shadow-lg transition-transform transform hover:scale-105"
+          >
+            <FaWhatsapp size={28} />
+            Chat on WhatsApp
+          </a>
         </div>
       </div>
     </section>

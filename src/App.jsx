@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import OurWork from "./components/OurWork";
 import Chatbot from "./components/Chatbot";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 import DeveloperSection from "./components/DeveloperSection";
 
 import AOS from "aos";
@@ -31,6 +32,7 @@ function App() {
       <DeveloperSection />
       <Contact />
       <Chatbot />
+      <WhatsAppFloat />
       <Footer />
     </>
   );

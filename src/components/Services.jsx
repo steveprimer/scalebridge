@@ -34,22 +34,14 @@ const services = [
 ];
 
 const Services = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detect screen size
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
-
-  const handleCardClick = (index) => {
-    if (isMobile) {
-      setActiveIndex(activeIndex === index ? null : index);
-    }
-  };
 
   return (
     <section
@@ -61,41 +53,45 @@ const Services = () => {
           Our <span className="text-blue-400">Services</span>
         </h2>
 
+        {/* Two cards per row even on small screens */}
         <div className="grid gap-4 sm:gap-6 grid-cols-2 lg:grid-cols-4 px-4">
           {services.map((service, index) => (
             <div
               key={index}
-              onClick={() => handleCardClick(index)}
               data-aos="fade-up"
               data-aos-delay={index * 50}
-              className="relative group rounded-xl overflow-hidden shadow-lg border border-blue-800/40 cursor-pointer"
+              className="relative rounded-xl overflow-hidden shadow-lg border border-blue-800/40 bg-white/5"
             >
-              <img
-                src={service.image}
-                alt={service.title}
-                loading="lazy"
-                className={`w-full h-full object-cover transition duration-500 ${
-                  isMobile && activeIndex === index
-                    ? "opacity-40"
-                    : "opacity-100"
-                } group-hover:opacity-40`}
-              />
-              {/* Overlay */}
-              <div
-                className={`absolute inset-0 backdrop-blur-md bg-white/10 p-4 flex flex-col justify-center items-center text-center transition duration-300 ${
-                  isMobile
-                    ? activeIndex === index
-                      ? "opacity-100"
-                      : "opacity-0"
-                    : "opacity-0 group-hover:opacity-100"
-                }`}
-              >
-                <div className="mb-3">{service.icon}</div>
-                <h3 className="text-lg font-semibold mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-gray-200">{service.description}</p>
+              <div className="relative group">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  loading="lazy"
+                  className="w-full h-48 object-cover transition duration-500 group-hover:opacity-40"
+                />
+
+                {!isMobile && (
+                  <div className="absolute inset-0 backdrop-blur-md bg-white/10 p-4 flex flex-col justify-center items-center text-center opacity-0 transition duration-300 group-hover:opacity-100">
+                    <div className="mb-3">{service.icon}</div>
+                    <h3 className="text-lg font-semibold mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-gray-200">
+                      {service.description}
+                    </p>
+                  </div>
+                )}
               </div>
+
+              {isMobile && (
+                <div className="p-4 text-center">
+                  <div className="mb-3 flex justify-center">{service.icon}</div>
+                  <h3 className="text-lg font-semibold mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-gray-200">{service.description}</p>
+                </div>
+              )}
             </div>
           ))}
         </div>
