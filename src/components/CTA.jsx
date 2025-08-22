@@ -26,7 +26,7 @@ const CTA = () => {
             className="group inline-flex items-center gap-3 bg-blue-400 text-black font-bold py-2 px-6 rounded-full text-lg hover:bg-white transition-all duration-300 shadow-lg shadow-blue-400/20"
           >
             <img
-              src="../src/assets/anson.jpg"
+              src="/anson.jpg"
               alt="Anson Avatar"
               className="w-8 h-8 rounded-full border-2 border-blue-600 group-hover:scale-110 transition-transform"
             />
