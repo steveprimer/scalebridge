@@ -14,28 +14,28 @@ import "swiper/css/navigation";
 const caseStudiesData = [
   {
     id: "futuronova",
-    image: "../src/assets/FuturoNova.png",
+    image: "/FuturoNova.png",
     title: "FuturoNova",
     category: "AI SaaS",
     status: "4 weeks",
   },
   {
     id: "nullvoid-studios",
-    image: "../src/assets/NullvoidStudios.png",
+    image: "/NullvoidStudios.png",
     title: "Nullvoid Studios",
     category: "Content Agency",
     status: "3 weeks",
   },
   {
     id: "aromatte-luxe",
-    image: "../src/assets/AromatteLuxe.png",
+    image: "/AromatteLuxe.png",
     title: "Aromatte Luxe",
     category: "E-commerce",
     status: "2 months",
   },
   {
     id: "evoque-wear",
-    image: "../src/assets/EvoqueWear.png",
+    image: "/EvoqueWear.png",
     title: "Evoque Wear",
     category: "E-commerce",
     status: "Ongoing",

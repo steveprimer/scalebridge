@@ -9,21 +9,21 @@ const allProjects = [
   {
     slug: "futuronova",
     name: "FuturoNova",
-    logo: "../src/assets/FuturoNovaJPG.jpg",
+    logo: "/FuturoNovaJPG.jpg",
     services: ["Chatbot Development", "Web Design", "UI/UX Design"],
     industry: ["AI", "SaaS"],
   },
   {
     slug: "nullvoid-studios",
     name: "Nullvoid Studios",
-    logo: "../src/assets/NullvoidStudiosJPG.jpg",
+    logo: "/NullvoidStudiosJPG.jpg",
     services: ["Web Design", "Brand Development", "Content Strategy"],
     industry: ["Content Marketing", "Digital Media"],
   },
   {
     slug: "aromatte-luxe",
     name: "Aromatte Luxe",
-    logo: "../src/assets/AromatteLuxeJPG.png",
+    logo: "/AromatteLuxeJPG.png",
     services: [
       "E-commerce Website",
       "Brand Development",
@@ -34,7 +34,7 @@ const allProjects = [
   {
     slug: "evoque-wear",
     name: "Evoque Wear",
-    logo: "../src/assets/EvoqueWearJPG.png",
+    logo: "/EvoqueWearJPG.png",
     services: [
       "E-commerce Website",
       "Brand Development",

@@ -11,7 +11,7 @@ export const allProjects = [
     stack: ["React", "Tailwind CSS", "Framer Motion", "Node.js"],
     industry: ["Artificial Intelligence", "Customer Support", "SaaS"],
     scope: ["UI/UX Design", "Frontend Development", "API Integration"],
-    mainImage: "../src/assets/FuturoNovaCS.png",
+    mainImage: "/FuturoNovaCS.png",
   },
   {
     slug: "nullvoid-studios",
@@ -23,7 +23,7 @@ export const allProjects = [
     stack: ["Next.js", "Tailwind CSS", "Framer Motion"],
     industry: ["Content Creation", "Digital Media"],
     scope: ["Web Design", "UI/UX", "Development"],
-    mainImage: "../src/assets/NullvoidStudiosCS.png",
+    mainImage: "/NullvoidStudiosCS.png",
   },
   {
     slug: "aromatte-luxe",
@@ -40,7 +40,7 @@ export const allProjects = [
       "Development",
       "Payment Integration",
     ],
-    mainImage: "../src/assets/AromatteLuxeCS.png",
+    mainImage: "/AromatteLuxeCS.png",
   },
   {
     slug: "evoque-wear",
@@ -52,7 +52,7 @@ export const allProjects = [
     stack: ["MongoDB", "Express.js", "Node.js", "Next.js", "Tailwind CSS"],
     industry: ["E-commerce", "Clothing Brand"],
     scope: ["Web Design", "UI/UX", "Development", "Payment Integration"],
-    mainImage: "../src/assets/EvoqueWear.png",
+    mainImage: "/EvoqueWear.png",
   },
   // Add other projects here in the same format
 ];
