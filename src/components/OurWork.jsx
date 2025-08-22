@@ -1,92 +1,145 @@
-import React from "react";
-import aromatteImg from "../assets/aromatte1.jpg";
-import portfolioImg from "../assets/portfolio.jpg";
-import chatbotImg from "../assets/chatbot.jpg";
-import juteHomeDecorImg from "../assets/jute-home-decor.jpg";
-import rentalCentralImg from "../assets/rental-central.jpg";
+import React, { useRef } from "react";
+import { ChevronLeft, ChevronRight, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const OurWork = () => {
-  const projects = [
-    {
-      title: "Jute Home Decor",
-      description:
-        "Built a sustainable, mobile-first eCommerce demo for handcrafted jute home accessories. The store showcases products with a clean UI, intuitive filtering, and a fast, secure checkout flow—designed to drive conversions while reflecting eco-conscious branding.",
-      image: juteHomeDecorImg,
-      link: "https://jute-home-decor.netlify.app",
-    },
-    {
-      title: "R3ntal Central (Car Rental Demo)",
-      description:
-        "Developed a responsive demo for a car rental platform, focused on user trust and booking ease. Features real-time availability, streamlined inquiry flow, and integrated payment UX—showing how rentals can be made frictionless and premium using modern web tooling.",
-      image: rentalCentralImg,
-      link: "https://r3ntal-central.netlify.app",
-    },
-    {
-      title: "Aromatte Luxe",
-      description:
-        "Helped launch a luxury fragrance brand online with a clean, fast, and mobile-first eCommerce store — complete with product showcase and online payment flow.",
-      image: aromatteImg,
-      link: "https://aromatteluxe.netlify.app",
-    },
-    {
-      title: "AI Customer Support Bot",
-      description:
-        "Deployed an AI-powered chatbot that answers 70%+ of customer queries instantly, reducing support workload and increasing response speed.",
-      image: chatbotImg,
-      link: "https://aichat-support.netlify.app",
-    },
-    {
-      title: "Developer Portfolio",
-      description:
-        "Clean, mobile-friendly portfolio crafted to clearly communicate services and build trust with potential clients.",
-      image: portfolioImg,
-      link: "https://ansonstephan.netlify.app",
-    },
-  ];
+// 1. Import Swiper components and styles from a CDN to resolve the error
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+
+// Import Swiper styles directly
+import "swiper/css";
+import "swiper/css/navigation";
+
+// Mock data for case studies
+const caseStudiesData = [
+  {
+    id: "futuronova",
+    image: "../src/assets/FuturoNova.png",
+    title: "FuturoNova",
+    category: "AI SaaS",
+    status: "4 weeks",
+  },
+  {
+    id: "nullvoid-studios",
+    image: "../src/assets/NullvoidStudios.png",
+    title: "Nullvoid Studios",
+    category: "Content Agency",
+    status: "3 weeks",
+  },
+  {
+    id: "aromatte-luxe",
+    image: "../src/assets/AromatteLuxe.png",
+    title: "Aromatte Luxe",
+    category: "E-commerce",
+    status: "2 months",
+  },
+  {
+    id: "evoque-wear",
+    image: "../src/assets/EvoqueWear.png",
+    title: "Evoque Wear",
+    category: "E-commerce",
+    status: "Ongoing",
+  },
+];
+
+// The Card component remains the same
+const CaseStudyCard = ({ study }) => (
+  <Link
+    to={`/case-studies/${study.id}`}
+    className="p-2 group cursor-pointer block"
+  >
+    <div className="bg-zinc-900 rounded-lg overflow-hidden">
+      <img
+        src={study.image}
+        alt={study.title}
+        className="w-full h-72 object-cover transform transition-transform duration-500 group-hover:scale-105"
+        onError={(e) => {
+          e.target.onerror = null;
+          e.target.src =
+            "https://placehold.co/800x600/1a1a1a/ffffff?text=Image+Error";
+        }}
+      />
+    </div>
+    <div className="pt-4 text-white">
+      <div className="flex justify-between items-center">
+        <h3 className="text-xl font-bold">{study.title}</h3>
+        <ArrowUpRight
+          className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          size={24}
+        />
+      </div>
+      <div className="flex justify-between text-zinc-400 mt-1 text-sm">
+        <span>{study.category}</span>
+        <span>{study.status}</span>
+      </div>
+    </div>
+  </Link>
+);
+
+// The main component structure remains the same
+export default function CaseStudy({ onNavigate }) {
+  const swiperRef = useRef(null);
 
   return (
-    <section
-      id="work"
-      className="bg-gradient-to-r from-black via-[#001233] to-black text-white py-16 sm:py-20"
-    >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-10 sm:mb-12">
-          Our <span className="text-blue-400">Work</span>
-        </h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 sm:gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-[#0f172a] border border-blue-800/40 rounded-xl shadow-md hover:shadow-blue-700 transition-shadow duration-700 ease-in-out text-left p-4 sm:p-6"
-              data-aos="fade-up"
-              data-aos-delay={index * 50}
+    <section className="bg-black py-20 font-sans">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
+            Case <span className="text-blue-400">Studies</span>
+          </h2>
+          <div className="flex space-x-3">
+            <button
+              onClick={() => swiperRef.current?.slidePrev()}
+              className="bg-blue-500 text-white p-3 rounded-full transition-all duration-300 hover:bg-black hover:shadow-[0_0_20px_4px_rgba(59,130,246,0.6)]"
+              aria-label="Scroll left"
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="rounded-md mb-3 sm:mb-4 w-full h-40 sm:h-48 object-cover"
-              />
-              <h3 className="text-lg sm:text-xl font-semibold">
-                {project.title}
-              </h3>
-              <p className="text-sm sm:text-base text-gray-100 mt-2 line-clamp-3 sm:line-clamp-none">
-                {project.description}
-              </p>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 font-medium mt-3 inline-block hover:underline"
-              >
-                View Project →
-              </a>
-            </div>
-          ))}
+              <ChevronLeft size={24} />
+            </button>
+            <button
+              onClick={() => swiperRef.current?.slideNext()}
+              className="bg-blue-500 text-white p-3 rounded-full transition-all duration-300 hover:bg-black hover:shadow-[0_0_20px_4px_rgba(59,130,246,0.6)]"
+              aria-label="Scroll right"
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
         </div>
+
+        <Swiper
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          modules={[Navigation, Autoplay]}
+          loop={true}
+          spaceBetween={10}
+          grabCursor={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: true,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1.5,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2.5,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+          }}
+          className="mySwiper"
+        >
+          {caseStudiesData.map((study) => (
+            <SwiperSlide key={study.id}>
+              <CaseStudyCard study={study} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
-};
-
-export default OurWork;
+}
