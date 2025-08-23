@@ -95,16 +95,15 @@ const MobileMenu = ({ menuOpen, setMenuOpen }) => {
                 <NavItem item={item} onClick={() => setMenuOpen(false)} />
               </motion.li>
             ))}
-            <motion.li variants={itemVariants}>
-              <HashLink
-                smooth
-                to="/#contact"
-                className="mt-4 inline-block bg-blue-400 text-white font-semibold py-3 px-8 rounded-full text-lg hover:bg-blue-500 transition-colors duration-300"
-                onClick={() => setMenuOpen(false)}
-              >
-                Book a call
-              </HashLink>
-            </motion.li>
+            <motion.a
+              href="https://cal.com/anson-stephan/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block bg-blue-400 text-black font-semibold py-3 px-8 rounded-full text-lg hover:bg-white transition-colors duration-300"
+              onClick={() => setMenuOpen(false)}
+            >
+              Book a call
+            </motion.a>
           </motion.ul>
         </motion.div>
       )}
@@ -145,13 +144,14 @@ const Navbar = () => {
               ))}
             </ul>
 
-            <HashLink
-              smooth
-              to="/#contact"
+            <a
+              href="https://cal.com/anson-stephan/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden md:inline-block bg-blue-400 text-black font-semibold py-2 px-5 rounded-full hover:bg-white transition-colors duration-300"
             >
               Book a call
-            </HashLink>
+            </a>
 
             <div
               className="md:hidden text-white cursor-pointer"

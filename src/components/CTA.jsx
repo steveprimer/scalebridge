@@ -20,7 +20,7 @@ const CTA = () => {
             Ready to level up your business?
           </h2>
           <motion.a
-            href="#contact-form" // You can link this to your contact form or Calendly
+            href="https://cal.com/anson-stephan/30min" // You can link this to your contact form or Calendly
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="group inline-flex items-center gap-3 bg-blue-400 text-black font-bold py-2 px-6 rounded-full text-lg hover:bg-white transition-all duration-300 shadow-lg shadow-blue-400/20"

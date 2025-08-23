@@ -27,7 +27,7 @@ const plans = [
     description: "One high-converting page, designed & built fast.",
     features: [
       "Custom design in Figma",
-      "Built in Framer (mobile-optimized & fast-loading)",
+      "Built using React (mobile-optimized & fast-loading)",
       "3 rounds of revisions",
       "Delivered in 7-10 days",
       "Flat price. No retainers. No surprises.",
@@ -40,7 +40,7 @@ const plans = [
     description: "Multi-page marketing site, handled end-to-end.",
     features: [
       "Figma design for up to 5 pages",
-      "Full Framer development",
+      "Full Stack E-commerce development",
       "Mobile-first & blazing fast",
       "3 rounds of revisions",
       "Delivered in 15-20 days",
@@ -123,13 +123,20 @@ const Plans = () => {
                 <p className="text-sm text-gray-500 mb-6 italic">
                   {plan.perfectFor}
                 </p>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full bg-blue-400 text-black font-bold py-3 px-6 rounded-full hover:bg-white transition-colors duration-300"
+                <a
+                  href="https://cal.com/anson-stephan/30min" // Link to your Calendly or contact form
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
                 >
-                  Secure Your August Spot
-                </motion.button>
+                  <motion.button
+                    whileHover={{ scale: 1.01 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full bg-blue-400 text-black font-bold py-3 px-6 rounded-full hover:bg-white transition-colors duration-300"
+                  >
+                    Secure Your August Spot
+                  </motion.button>
+                </a>
               </div>
             </motion.div>
           ))}

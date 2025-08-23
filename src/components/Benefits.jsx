@@ -250,7 +250,7 @@ const Benefits = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
           {benefits.map((benefit, index) => (
             <motion.div
@@ -261,8 +261,12 @@ const Benefits = () => {
               <div className="text-blue-400 mb-4 inline-block">
                 {benefit.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-              <p className="text-gray-400">{benefit.description}</p>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                {benefit.title}
+              </h3>
+              <p className="text-gray-400 text-sm sm:text-base">
+                {benefit.description}
+              </p>
             </motion.div>
           ))}
         </motion.div>

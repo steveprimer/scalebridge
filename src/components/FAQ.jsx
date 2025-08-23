@@ -3,13 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // SVG for the plus/minus icon
 const PlusIcon = () => (
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
     <path
       d="M12 5V19"
       stroke="currentColor"
@@ -17,24 +11,6 @@ const PlusIcon = () => (
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-    <path
-      d="M5 12H19"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
-
-const MinusIcon = () => (
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
     <path
       d="M5 12H19"
       stroke="currentColor"
@@ -117,6 +93,20 @@ const FAQ = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  // Variants for staggered question load animation
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <section id="faq" className="bg-black text-white py-20 sm:py-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
@@ -133,16 +123,24 @@ const FAQ = () => {
           <h2 className="text-4xl sm:text-5xl font-bold">We got answers.</h2>
         </motion.div>
 
-        <div className="space-y-2">
+        {/* Animate FAQ list */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="space-y-2"
+        >
           {faqData.map((item, index) => (
-            <AccordionItem
-              key={index}
-              item={item}
-              isOpen={openIndex === index}
-              onClick={() => handleToggle(index)}
-            />
+            <motion.div key={index} variants={itemVariants}>
+              <AccordionItem
+                item={item}
+                isOpen={openIndex === index}
+                onClick={() => handleToggle(index)}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

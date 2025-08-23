@@ -81,7 +81,7 @@ export default function CaseStudy({ onNavigate }) {
   const swiperRef = useRef(null);
 
   return (
-    <section className="bg-black py-20 font-sans">
+    <section className="bg-black pt-10 sm:pt-20 pb-16 font-sans">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white">
