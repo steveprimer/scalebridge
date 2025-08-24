@@ -14,8 +14,8 @@ const allProjects = [
     industry: ["AI", "SaaS"],
   },
   {
-    slug: "nullvoid-studios",
-    name: "Nullvoid Studios",
+    slug: "nightcircuit-studios",
+    name: "NightCircuit Studios",
     logo: "/NullvoidStudiosJPG.jpg",
     services: ["Web Design", "Brand Development", "Content Strategy"],
     industry: ["Content Marketing", "Digital Media"],

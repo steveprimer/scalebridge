@@ -5,9 +5,9 @@ const testimonials = [
   {
     quote:
       "Working with ScaleBridge was super easy from start to finish. They handled everything, and now our site actually feels like us. We’ve already noticed way more people engaging with it.",
-    name: "Lakshya Kaushal",
-    title: "Founder, Nullvoid Studios",
-    avatar: "/lakshya.jpg",
+    name: "Chirag Mahani",
+    title: "Founder, NightCircuit Studios",
+    avatar: "/chirag.jpg",
   },
   {
     quote:

@@ -14,11 +14,11 @@ export const allProjects = [
     mainImage: "/FuturoNovaCS.png",
   },
   {
-    slug: "nullvoid-studios",
-    name: "Nullvoid Studios",
+    slug: "nightcircuit-studios",
+    name: "NightCircuit Studios",
     description:
-      "Nullvoid Studios needed a complete overhaul of their online presence to better reflect their brand identity and showcase their portfolio. We worked closely with their team to design a sleek, modern website that highlights their creative work while ensuring optimal performance and responsiveness across all devices. The new site has significantly increased user engagement and lead generation.",
-    client: "Nullvoid Studios",
+      "NightCircuit Studios needed a complete overhaul of their online presence to better reflect their brand identity and showcase their portfolio. We worked closely with their team to design a sleek, modern website that highlights their creative work while ensuring optimal performance and responsiveness across all devices. The new site has significantly increased user engagement and lead generation.",
+    client: "NightCircuit Studios",
     turnaround: "3 weeks",
     stack: ["Next.js", "Tailwind CSS", "Framer Motion"],
     industry: ["Content Creation", "Digital Media"],

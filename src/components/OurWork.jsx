@@ -18,9 +18,9 @@ const caseStudiesData = [
     status: "4 weeks",
   },
   {
-    id: "nullvoid-studios",
+    id: "nightcircuit-studios",
     image: "/NullvoidStudios.png",
-    title: "Nullvoid Studios",
+    title: "NightCircuit Studios",
     category: "Content Agency",
     status: "3 weeks",
   },
