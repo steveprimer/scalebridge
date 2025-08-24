@@ -1,7 +1,7 @@
 /* Install first:
-   npm install @calcom/embed-react
-   or
-   yarn add @calcom/embed-react
+    npm install @calcom/embed-react
+    or
+    yarn add @calcom/embed-react
 */
 
 import Cal, { getCalApi } from "@calcom/embed-react";
@@ -19,15 +19,21 @@ export default function BookingPage() {
   }, []);
 
   return (
-    <section className="w-full min-h-screen bg-black text-white flex flex-col items-center justify-start py-16 px-4 sm:px-8">
+    <section className="w-full min-h-screen bg-black text-white flex flex-col items-center justify-start py-16 px-4 sm:px-8 font-body">
+      {" "}
+      {/* ✅ Font Applied */}
       {/* Heading */}
       <div className="max-w-4xl text-left w-full mb-12">
-        <p className="text-md font-medium text-blue-400 mb-2">BOOKING</p>
-        <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
+        <p className="font-heading text-md font-medium text-blue-400 mb-2">
+          BOOKING
+        </p>{" "}
+        {/* ✅ Font Applied */}
+        <h2 className="font-heading text-4xl sm:text-5xl font-bold text-white leading-tight">
+          {" "}
+          {/* ✅ Font Applied */}
           Let&apos;s discuss your project!
         </h2>
       </div>
-
       {/* Cal Embed */}
       <div className="w-full max-w-6xl flex-1">
         <Cal

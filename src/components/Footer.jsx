@@ -60,16 +60,23 @@ const Footer = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8 }}
-      className="bg-black text-white py-10 pb-24"
+      className="bg-black text-white py-10 pb-24 font-body" // ✅ Font Applied
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Left side: Logo and Copyright */}
           <div className="text-center md:text-left mb-6 md:mb-0">
-            <a href="#home" className="text-3xl font-bold text-white">
+            <a
+              href="#home"
+              className="font-heading text-3xl font-bold text-white"
+            >
+              {" "}
+              {/* ✅ Font Applied */}
               <span className="text-blue-400">S</span>caleBridge
             </a>
-            <p className="text-sm text-gray-500 mt-2">
+            <p className="font-body text-sm text-gray-500 mt-2">
+              {" "}
+              {/* ✅ Font Applied */}
               &copy; {new Date().getFullYear()} ScaleBridge. All rights
               reserved.
             </p>

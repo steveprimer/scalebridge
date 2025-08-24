@@ -21,36 +21,37 @@ const PlusIcon = () => (
   </svg>
 );
 
+// ✅ FAQ content rewritten to be more conversational and include your services
 const faqData = [
   {
     question: "What services do you offer?",
     answer:
-      "We specialize in end-to-end website development, including custom design (UI/UX), frontend development using modern frameworks like React, and backend integration. We build everything from high-converting landing pages to full-scale marketing websites and e-commerce platforms.",
+      "We build pretty much anything you need to succeed online! Our main services are high-converting landing pages, full e-commerce websites, and smart AI chatbots that help automate your customer support. We handle everything from design to launch.",
   },
   {
-    question: "How long does the website design process take?",
+    question: "How long does a project usually take?",
     answer:
-      "A typical landing page takes about 7-10 days, while a multi-page website is usually delivered within 15-20 days. The exact timeline can vary depending on the complexity and scope of the project.",
+      "We're pretty fast! A sharp landing page usually takes about a week to ten days. For a bigger, multi-page e-commerce site, you're looking at around 15 to 20 days. Of course, it all depends on the project's specifics, but we always keep you in the loop.",
   },
   {
-    question: "Will I be involved in the design process?",
+    question: "Will I be involved in the process?",
     answer:
-      "Absolutely. We believe in a collaborative approach. You'll be involved from the initial discovery call to the final design approvals. We use Figma for our designs, which allows you to leave feedback and watch the project come to life in real-time.",
+      "Absolutely, we want you in the driver's seat. We see it as a team effort. You'll be involved right from the start, and we use Figma for all our designs so you can drop comments and see the progress live. It's a transparent, collaborative process.",
   },
   {
-    question: "Do you provide ongoing support after launch?",
+    question: "Do you provide support after launch?",
     answer:
-      "Yes, we offer ongoing support and maintenance packages to ensure your website remains up-to-date, secure, and performs optimally. We can discuss a plan that best fits your needs.",
+      "Yep, we don't just launch and leave. We offer support and maintenance plans to keep your site secure, fast, and fresh. We can figure out a plan that makes the most sense for you after we go live.",
   },
   {
     question: "Can you help with SEO?",
     answer:
-      "Our development process is SEO-focused from the ground up. We build websites with clean code, fast loading speeds, and mobile-first principles—all of which are crucial for good search engine rankings. We can also implement on-page SEO best practices.",
+      "For sure. SEO is baked into everything we do. We build our sites to be super fast and mobile-friendly with clean code, which Google loves. We'll also handle all the on-page SEO basics to give you a great starting point for ranking higher.",
   },
   {
     question: "Do you offer refunds?",
     answer:
-      "Due to the custom nature of our work, we don't offer refunds once a project has started. However, we are committed to your satisfaction and include multiple rounds of revisions to ensure the final product meets your expectations.",
+      "Since every project is built from scratch just for you, we can't offer refunds once we've started. But your happiness is our top priority, which is why we include revision rounds to make sure you absolutely love the final result before we launch.",
   },
 ];
 
@@ -59,7 +60,7 @@ const AccordionItem = ({ item, isOpen, onClick }) => {
     <div className="border-b border-gray-800/50">
       <button
         onClick={onClick}
-        className="flex justify-between items-center w-full py-5 text-left text-lg font-medium text-white"
+        className="font-heading flex justify-between items-center w-full py-5 text-left text-lg font-medium text-white" // ✅ Font Applied
       >
         <span>{item.question}</span>
         <motion.div
@@ -78,7 +79,10 @@ const AccordionItem = ({ item, isOpen, onClick }) => {
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="pb-5 pr-8 text-gray-400">{item.answer}</div>
+            <div className="font-body pb-5 pr-8 text-gray-400 leading-relaxed">
+              {item.answer}
+            </div>{" "}
+            {/* ✅ Font & Spacing Applied */}
           </motion.div>
         )}
       </AnimatePresence>
@@ -93,7 +97,6 @@ const FAQ = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // Variants for staggered question load animation
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -108,7 +111,9 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="bg-black text-white py-20 sm:py-24">
+    <section id="faq" className="bg-black text-white py-20 sm:py-24 font-body">
+      {" "}
+      {/* ✅ Font Applied */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -117,13 +122,17 @@ const FAQ = () => {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <p className="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-2">
+          <p className="font-heading text-sm font-semibold text-blue-400 uppercase tracking-wider mb-2">
+            {" "}
+            {/* ✅ Font Applied */}
             Questions?
           </p>
-          <h2 className="text-4xl sm:text-5xl font-bold">We got answers.</h2>
+          <h2 className="font-heading text-4xl sm:text-5xl font-bold">
+            We got answers.
+          </h2>{" "}
+          {/* ✅ Font Applied */}
         </motion.div>
 
-        {/* Animate FAQ list */}
         <motion.div
           variants={containerVariants}
           initial="hidden"

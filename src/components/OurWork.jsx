@@ -2,11 +2,9 @@ import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// 1. Import Swiper components and styles from a CDN to resolve the error
+// 1. Import Swiper components and styles
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-
-// Import Swiper styles directly
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -42,7 +40,6 @@ const caseStudiesData = [
   },
 ];
 
-// The Card component remains the same
 const CaseStudyCard = ({ study }) => (
   <Link
     to={`/case-studies/${study.id}`}
@@ -62,13 +59,16 @@ const CaseStudyCard = ({ study }) => (
     </div>
     <div className="pt-4 text-white">
       <div className="flex justify-between items-center">
-        <h3 className="text-xl font-bold">{study.title}</h3>
+        <h3 className="font-heading text-xl font-bold">{study.title}</h3>{" "}
+        {/* ✅ Font Applied */}
         <ArrowUpRight
           className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           size={24}
         />
       </div>
-      <div className="flex justify-between text-zinc-400 mt-1 text-sm">
+      <div className="font-body flex justify-between text-zinc-400 mt-1 text-sm">
+        {" "}
+        {/* ✅ Font Applied */}
         <span>{study.category}</span>
         <span>{study.status}</span>
       </div>
@@ -76,15 +76,18 @@ const CaseStudyCard = ({ study }) => (
   </Link>
 );
 
-// The main component structure remains the same
 export default function CaseStudy({ onNavigate }) {
   const swiperRef = useRef(null);
 
   return (
-    <section className="bg-black pt-10 sm:pt-20 pb-16 font-sans">
+    <section className="bg-black pt-10 sm:pt-20 pb-16 font-body">
+      {" "}
+      {/* ✅ Font Applied */}
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold text-white">
+            {" "}
+            {/* ✅ Font Applied */}
             Case <span className="text-blue-400">Studies</span>
           </h2>
           <div className="flex space-x-3">
@@ -118,18 +121,9 @@ export default function CaseStudy({ onNavigate }) {
             disableOnInteraction: true,
           }}
           breakpoints={{
-            640: {
-              slidesPerView: 1.5,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 2.5,
-              spaceBetween: 30,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 40,
-            },
+            640: { slidesPerView: 1.5, spaceBetween: 20 },
+            768: { slidesPerView: 2.5, spaceBetween: 30 },
+            1024: { slidesPerView: 3, spaceBetween: 40 },
           }}
           className="mySwiper"
         >

@@ -75,7 +75,12 @@ const Plans = () => {
   };
 
   return (
-    <section id="plans" className="bg-black text-white py-20 sm:py-24">
+    <section
+      id="plans"
+      className="bg-black text-white py-20 sm:py-24 font-body"
+    >
+      {" "}
+      {/* ✅ Font Applied */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -84,10 +89,14 @@ const Plans = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-2">
+          <p className="font-heading text-sm font-semibold text-blue-400 uppercase tracking-wider mb-2">
+            {" "}
+            {/* ✅ Font Applied */}
             Plans
           </p>
-          <h2 className="text-4xl sm:text-5xl font-bold">
+          <h2 className="font-heading text-4xl sm:text-5xl font-bold">
+            {" "}
+            {/* ✅ Font Applied */}
             Built for teams that need fast execution.
           </h2>
         </motion.div>
@@ -106,11 +115,18 @@ const Plans = () => {
               className="flex flex-col p-8 bg-[#0a0a0a] rounded-xl border border-gray-800/50"
             >
               <div className="flex-grow">
-                <h3 className="text-3xl font-bold text-white mb-2">
+                <h3 className="font-heading text-3xl font-bold text-white mb-2">
+                  {" "}
+                  {/* ✅ Font Applied */}
                   {plan.title}
                 </h3>
-                <p className="text-gray-400 mb-8">{plan.description}</p>
-                <ul className="space-y-4 mb-8">
+                <p className="font-body text-gray-400 mb-8">
+                  {plan.description}
+                </p>{" "}
+                {/* ✅ Font Applied */}
+                <ul className="font-body space-y-4 mb-8">
+                  {" "}
+                  {/* ✅ Font Applied */}
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start">
                       <CheckIcon />
@@ -120,11 +136,13 @@ const Plans = () => {
                 </ul>
               </div>
               <div>
-                <p className="text-sm text-gray-500 mb-6 italic">
+                <p className="font-body text-sm text-gray-500 mb-6 italic">
+                  {" "}
+                  {/* ✅ Font Applied */}
                   {plan.perfectFor}
                 </p>
                 <a
-                  href="https://cal.com/anson-stephan/30min" // Link to your Calendly or contact form
+                  href="https://cal.com/anson-stephan/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block"
@@ -132,7 +150,7 @@ const Plans = () => {
                   <motion.button
                     whileHover={{ scale: 1.01 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-full bg-blue-400 text-black font-bold py-3 px-6 rounded-full hover:bg-white transition-colors duration-300"
+                    className="font-heading w-full bg-blue-400 text-black font-bold py-3 px-6 rounded-full hover:bg-white transition-colors duration-300" /* ✅ Font Applied */
                   >
                     Secure Your August Spot
                   </motion.button>

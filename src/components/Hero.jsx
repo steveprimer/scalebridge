@@ -2,42 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 
-// Placeholder logo
-const PlaceholderLogoIcon = () => (
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className="text-gray-500"
-  >
-    <path
-      d="M12 2L2 7L12 12L22 7L12 2Z"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M2 17L12 22L22 17"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M2 12L12 17L22 12"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
+// (The PlaceholderLogoIcon and CompanyLogos components remain the same)
+// ...
 
 // Scrolling company logos
-
 const CompanyLogos = () => {
   const logos = [
     { name: "NullvoidStudios", src: "/NullvoidStudiosJPG.jpg" },
@@ -56,14 +24,10 @@ const CompanyLogos = () => {
 
   return (
     <div className="w-full max-w-5xl mx-auto">
-      <p className="text-center text-sm text-gray-400 mb-6">
+      <p className="font-body text-center text-sm text-gray-400 mb-6">
         Trusted by 30+ agencies, startups, and consultants worldwide
       </p>
-      <Marquee
-        gradient={false} // disables fade overlay, can set true for soft edges
-        speed={40} // adjust speed
-        pauseOnHover={false}
-      >
+      <Marquee gradient={false} speed={40} pauseOnHover={false}>
         {logos.map((logo, index) => (
           <div
             key={index}
@@ -95,34 +59,25 @@ const Hero = () => {
 
   return (
     <>
-      {/* <style>{`
-        @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-scroll {
-          display: flex;
-          width: fit-content;
-          animation: scroll 5s linear infinite;
-        }
-      `}</style> */}
-
       <section
         id="home"
         className="relative min-h-fit sm:h-screen w-full bg-black text-white flex flex-col justify-start sm:justify-center overflow-hidden pt-24 sm:pt-20"
       >
         <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 lg:px-8">
+          {/* ✅ OPTIMIZED HEADING SECTION */}
           <motion.h1
             variants={sentenceVariants}
             initial="hidden"
             animate="visible"
-            className="max-w-4xl text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-blue-400 leading-snug sm:leading-tight mt-8"
+            // Adjusted line-height for better spacing
+            className="font-heading max-w-5xl text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-9 md:mb-2 text-blue-400 leading-tight lg:leading-normal md:mt-2"
           >
+            {/* Restructured into two balanced lines */}
             <motion.span className="block" variants={lineVariants}>
-              We design websites that
+              We design <span className="text-white">websites</span> that
             </motion.span>
             <motion.span className="block" variants={lineVariants}>
-              convert visitors into loyal
+              <span className="text-white">convert visitors</span> into loyal
             </motion.span>
             <motion.span className="block" variants={lineVariants}>
               customers.
@@ -133,7 +88,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
-            className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-300 mb-8 leading-relaxed mt-9"
+            className="font-body max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-300 mb-8 leading-relaxed mt-9 md:mt-0"
           >
             We focus on strategic design and flawless execution
             <br />
@@ -151,7 +106,7 @@ const Hero = () => {
               stiffness: 120,
             }}
             href="https://cal.com/anson-stephan/30min"
-            className="group inline-flex items-center gap-3 bg-blue-400 text-black font-bold py-2 px-5 sm:px-6 rounded-full text-base sm:text-lg hover:bg-white transition-all duration-300 shadow-lg shadow-blue-400/20"
+            className="font-heading group inline-flex items-center gap-3 bg-blue-400 text-black font-bold py-2 px-5 sm:px-6 rounded-full text-base sm:text-lg hover:bg-white transition-all duration-300 shadow-lg shadow-blue-400/20"
           >
             <img
               src="/anson.jpg"

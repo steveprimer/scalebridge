@@ -228,7 +228,12 @@ const Benefits = () => {
   };
 
   return (
-    <section id="benefits" className="bg-black text-white py-20 sm:py-24">
+    <section
+      id="benefits"
+      className="bg-black text-white py-20 sm:py-24 font-body"
+    >
+      {" "}
+      {/* ✅ Font Applied */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -237,10 +242,14 @@ const Benefits = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-sm font-semibold text-blue-400 uppercase tracking-wider mb-2">
+          <p className="font-heading text-sm font-semibold text-blue-400 uppercase tracking-wider mb-2">
+            {" "}
+            {/* ✅ Font Applied */}
             Benefits
           </p>
-          <h2 className="text-4xl sm:text-5xl font-bold">
+          <h2 className="font-heading text-4xl sm:text-5xl font-bold">
+            {" "}
+            {/* ✅ Font Applied */}
             We're Driven by outcomes
           </h2>
         </motion.div>
@@ -250,7 +259,7 @@ const Benefits = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+          className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
           {benefits.map((benefit, index) => (
             <motion.div
@@ -261,10 +270,14 @@ const Benefits = () => {
               <div className="text-blue-400 mb-4 inline-block">
                 {benefit.icon}
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">
+              <h3 className="font-heading text-lg sm:text-xl font-semibold mb-2">
+                {" "}
+                {/* ✅ Font Applied */}
                 {benefit.title}
               </h3>
-              <p className="text-gray-400 text-sm sm:text-base">
+              <p className="font-body text-gray-400 text-sm sm:text-base leading-relaxed">
+                {" "}
+                {/* ✅ Font & Spacing Applied */}
                 {benefit.description}
               </p>
             </motion.div>

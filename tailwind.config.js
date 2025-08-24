@@ -2,7 +2,15 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        // This remains correct
+        heading: ["Montserrat", "sans-serif"],
+
+        // Changed to Lato to match index.html
+        body: ["Lato", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
