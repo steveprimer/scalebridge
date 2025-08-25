@@ -70,7 +70,7 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
             // Adjusted line-height for better spacing
-            className="font-heading max-w-5xl text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-9 md:mb-2 text-blue-400 leading-tight lg:leading-normal md:mt-2"
+            className="font-heading max-w-5xl text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-9 md:mb-2 text-blue-400 leading-tight lg:leading-normal md:mt-2"
           >
             {/* Restructured into two balanced lines */}
             <motion.span className="block" variants={lineVariants}>
