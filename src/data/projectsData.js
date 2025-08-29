@@ -43,6 +43,31 @@ export const allProjects = [
     mainImage: "/AromatteLuxeCS.png",
   },
   {
+    slug: "nestera-fashion",
+    name: "Nestera Fashion",
+    description:
+      "Nestera Fashion sought to establish a strong online presence for their trendy clothing brand. We developed a visually appealing and user-friendly e-commerce platform that showcases their latest collections while providing a smooth shopping experience. The website features advanced filtering options, high-quality imagery, and a secure checkout process, resulting in increased customer satisfaction and sales.",
+    client: "Nestera Fashion",
+    turnaround: "3 weeks",
+    stack: [
+      "MongoDB",
+      "Express.js",
+      "Node.js",
+      "Framer Motion",
+      "Next.js",
+      "Tailwind CSS",
+    ],
+    industry: ["E-commerce", "Clothing Brand"],
+    scope: [
+      "E-commerce Website",
+      "UI/UX",
+      "Payment Integration",
+      "Brand Development",
+      "Admin Dashboard",
+    ],
+    mainImage: "/NesteraFashionCS.png",
+  },
+  {
     slug: "evoque-wear",
     name: "Evoque Wear",
     description:

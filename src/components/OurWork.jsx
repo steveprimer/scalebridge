@@ -32,6 +32,13 @@ const caseStudiesData = [
     status: "2 months",
   },
   {
+    id: "nestera-fashion",
+    image: "/NesteraFashion.png",
+    title: "Nestera Fashion",
+    category: "E-commerce Clothing Brand",
+    status: "3 weeks",
+  },
+  {
     id: "evoque-wear",
     image: "/EvoqueWear.png",
     title: "Evoque Wear",

@@ -32,6 +32,19 @@ const allProjects = [
     industry: ["E-commerce", "Perfume Brand"],
   },
   {
+    slug: "nestera-fashion",
+    name: "Nestera Fashion",
+    logo: "/NesteraFashionJPG.jpg",
+    services: [
+      "E-commerce Website",
+      "Brand Development",
+      "Payment Integration",
+      "Admin Dashboard",
+      "UI/UX Design",
+    ],
+    industry: ["E-commerce", "Clothing Brand"],
+  },
+  {
     slug: "evoque-wear",
     name: "Evoque Wear",
     logo: "/EvoqueWearJPG.png",
