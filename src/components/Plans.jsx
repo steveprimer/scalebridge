@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import CurrentMonth from "./CurrentMonth";
 
 // SVG for the checkmark icon
 const CheckIcon = () => (
@@ -152,7 +153,7 @@ const Plans = () => {
                     whileTap={{ scale: 0.95 }}
                     className="font-heading w-full bg-blue-400 text-black font-bold py-3 px-6 rounded-full hover:bg-white transition-colors duration-300" /* ✅ Font Applied */
                   >
-                    Secure Your August Spot
+                    Secure Your <CurrentMonth /> Spot
                   </motion.button>
                 </a>
               </div>

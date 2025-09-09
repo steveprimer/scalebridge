@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import CurrentMonth from "./CurrentMonth";
 
 const CTA = () => {
   return (
@@ -21,7 +22,9 @@ const CTA = () => {
             {" "}
             {/* ✅ Font Applied */}
             Only <span className="font-bold">3 slots</span> left for{" "}
-            <span className="font-bold">August</span>
+            <span className="font-bold">
+              <CurrentMonth />
+            </span>
           </p>
           <h2 className="font-heading text-2xl sm:text-3xl font-bold text-blue-400 mb-8">
             {" "}
