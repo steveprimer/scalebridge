@@ -50,7 +50,7 @@ export default function CTA() {
             call today.
           </p>
           <motion.a
-            href="https://cal.com/anson-stephan/30min"
+            href="https://cal.com/anmolsharma777/30min"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="font-heading group inline-flex items-center gap-3 bg-blue-400 text-black font-bold py-2 px-6 rounded-full text-sm sm:text-lg hover:bg-white transition-all duration-300 shadow-lg shadow-blue-400/20 mt-8" // ✅ Font Applied
