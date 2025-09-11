@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import ScrollToTop from "../components/ScrollToTop";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 // import About from "./components/About";
@@ -27,6 +28,7 @@ function App() {
   }, []);
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Hero />
       <CaseStudies />

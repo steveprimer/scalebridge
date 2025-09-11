@@ -54,12 +54,21 @@ export default function PaidAdsHero() {
     <div className="bg-black text-white font-sans relative overflow-hidden">
       {/* Blue glow effect */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-400/20 rounded-full blur-[150px] pointer-events-none"
+        className="
+    absolute top-1/2 left-1/2 
+    -translate-x-1/2 -translate-y-1/2 
+    w-[250px] h-[250px] 
+    sm:w-[400px] sm:h-[400px] 
+    md:w-[500px] md:h-[500px] 
+    lg:w-[600px] lg:h-[600px] 
+    bg-blue-400/20 rounded-full blur-[100px] sm:blur-[130px] md:blur-[150px] 
+    pointer-events-none
+  "
         aria-hidden="true"
       ></div>
 
       <div className="relative isolate px-6 pt-6 lg:px-0">
-        <main className="max-w-4xl mx-auto pt-20 pb-32 sm:pt-48 sm:pb-40">
+        <main className="max-w-4xl mx-auto pt-20 pb-12 sm:pt-48 sm:pb-40 md:pb-22">
           <div className="text-center">
             <motion.div
               initial="hidden"

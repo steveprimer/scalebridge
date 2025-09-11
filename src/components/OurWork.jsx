@@ -25,11 +25,11 @@ const caseStudiesData = [
     status: "3 weeks",
   },
   {
-    id: "aromatte-luxe",
-    image: "/AromatteLuxe.png",
-    title: "Aromatte Luxe",
+    id: "klaws",
+    image: "/Klaws.png",
+    title: "KLAWS",
     category: "E-commerce",
-    status: "2 months",
+    status: "1 months",
   },
   {
     id: "nestera-fashion",
@@ -44,6 +44,13 @@ const caseStudiesData = [
     title: "Evoque Wear",
     category: "E-commerce",
     status: "Ongoing",
+  },
+  {
+    id: "aromatte-luxe",
+    image: "/AromatteLuxe.png",
+    title: "Aromatte Luxe",
+    category: "E-commerce",
+    status: "2 months",
   },
 ];
 

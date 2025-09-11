@@ -21,15 +21,17 @@ const allProjects = [
     industry: ["Content Marketing", "Digital Media"],
   },
   {
-    slug: "aromatte-luxe",
-    name: "Aromatte Luxe",
-    logo: "/AromatteLuxeJPG.png",
+    slug: "klaws",
+    name: "KLAWS",
+    logo: "/KlawsJPG.jpg",
     services: [
       "E-commerce Website",
+      "Admin Dashboard",
       "Brand Development",
+      "Product Pages",
       "Payment Integration",
     ],
-    industry: ["E-commerce", "Perfume Brand"],
+    industry: ["E-commerce", "Press On Nails Brand"],
   },
   {
     slug: "nestera-fashion",
@@ -54,6 +56,17 @@ const allProjects = [
       "Payment Integration",
     ],
     industry: ["E-commerce", "Clothing Brand"],
+  },
+  {
+    slug: "aromatte-luxe",
+    name: "Aromatte Luxe",
+    logo: "/AromatteLuxeJPG.png",
+    services: [
+      "E-commerce Website",
+      "Brand Development",
+      "Payment Integration",
+    ],
+    industry: ["E-commerce", "Perfume Brand"],
   },
   // Add more projects here...
 ];

@@ -26,21 +26,23 @@ export const allProjects = [
     mainImage: "/NullvoidStudiosCS.png",
   },
   {
-    slug: "aromatte-luxe",
-    name: "Aromatte Luxe",
+    slug: "klaws",
+    name: "KLAWS",
     description:
-      "Aromatte Luxe partnered with us to elevate their luxury fragrance brand into the digital space. We crafted a premium e-commerce experience with a refined design language that mirrors the sophistication of their products. By combining immersive visuals, intuitive navigation, and a seamless checkout process, Aromatte Luxe saw a remarkable boost in online sales and brand loyalty.",
-    client: "Aromatte Luxe",
+      "KLAWS approached us to transform their custom press-on nails brand into a sleek digital experience. We built a stylish e-commerce platform with a playful yet polished design that reflects their bold, creative personality. By blending vibrant product visuals, smooth navigation, and a frictionless checkout, KLAWS achieved higher customer engagement and a noticeable lift in online sales.",
+    client: "KLAWS",
     turnaround: "4 weeks",
     stack: ["MongoDB", "Express.js", "Node.js", "Next.js", "Tailwind CSS"],
-    industry: ["E-commerce", "Perfume Brand"],
+    industry: ["E-commerce", "Press On Nails Brand"],
     scope: [
       "E-commerce Website",
       "UI/UX",
-      "Development",
+      "Brand Development",
+      "Admin Dashboard",
+      "Product Pages",
       "Payment Integration",
     ],
-    mainImage: "/AromatteLuxeCS.png",
+    mainImage: "/KlawsCS.png",
   },
   {
     slug: "nestera-fashion",
@@ -78,6 +80,23 @@ export const allProjects = [
     industry: ["E-commerce", "Clothing Brand"],
     scope: ["Web Design", "UI/UX", "Development", "Payment Integration"],
     mainImage: "/EvoqueWear.png",
+  },
+  {
+    slug: "aromatte-luxe",
+    name: "Aromatte Luxe",
+    description:
+      "Aromatte Luxe partnered with us to elevate their luxury fragrance brand into the digital space. We crafted a premium e-commerce experience with a refined design language that mirrors the sophistication of their products. By combining immersive visuals, intuitive navigation, and a seamless checkout process, Aromatte Luxe saw a remarkable boost in online sales and brand loyalty.",
+    client: "Aromatte Luxe",
+    turnaround: "4 weeks",
+    stack: ["MongoDB", "Express.js", "Node.js", "Next.js", "Tailwind CSS"],
+    industry: ["E-commerce", "Perfume Brand"],
+    scope: [
+      "E-commerce Website",
+      "UI/UX",
+      "Development",
+      "Payment Integration",
+    ],
+    mainImage: "/AromatteLuxeCS.png",
   },
   // Add other projects here in the same format
 ];

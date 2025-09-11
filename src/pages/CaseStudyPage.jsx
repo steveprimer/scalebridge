@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { allProjects } from "../data/projectsData"; // Import the data
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Tag = ({ text }) => (
   <span className="inline-block bg-blue-900/30 text-blue-300 text-xs font-medium mr-2 mb-2 px-3 py-1.5 rounded-full border border-blue-800/50">
@@ -37,6 +38,7 @@ const CaseStudyPage = () => {
 
   return (
     <div className="bg-black text-white min-h-screen">
+      <ScrollToTop />
       <Navbar />
 
       <main className="max-w-5xl mx-auto pt-32 pb-20 sm:pt-40 sm:pb-24 px-4">

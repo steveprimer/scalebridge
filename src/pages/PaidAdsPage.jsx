@@ -12,10 +12,12 @@ import Services from "../components/AdServices";
 import Features from "../components/AdFeatures";
 import Testimonials from "../components/AdTestimonials";
 import CTA from "../components/AdCTA";
+import ScrollToTop from "../components/ScrollToTop";
 
 function PaidAdsPage() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Hero />
       <Services />
