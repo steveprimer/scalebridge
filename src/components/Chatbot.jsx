@@ -37,6 +37,7 @@ Services:
 - Automation Workflows
 - Web Development (Modern, responsive, fast)
 - Lead Generation & Outreach Campaigns
+- Paid Meta Ads (Facebook & Instagram advertising to drive sales)
 
 Support Info:
 We typically respond to inquiries within 24 hours.

@@ -32,6 +32,7 @@ const MobileMenu = ({ menuOpen, setMenuOpen }) => {
   const navLinks = [
     { name: "Benefits", path: "/#benefits" },
     { name: "Case Studies", path: "/case-studies" },
+    { name: "Paid Ads", path: "/paid-ads" },
   ];
 
   const menuVariants = {
@@ -82,8 +83,9 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const navLinks = [
-    { name: "Benefits", path: "/#benefits" },
+    // { name: "Benefits", path: "/#benefits" },
     { name: "Case Studies", path: "/case-studies" },
+    { name: "Paid Ads", path: "/paid-ads" },
   ];
 
   useEffect(() => {
