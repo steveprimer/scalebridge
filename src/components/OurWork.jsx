@@ -29,7 +29,7 @@ const caseStudiesData = [
     image: "/Klaws.png",
     title: "KLAWS",
     category: "E-commerce",
-    status: "1 months",
+    status: "1 month",
   },
   {
     id: "nestera-fashion",
