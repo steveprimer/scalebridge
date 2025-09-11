@@ -105,7 +105,7 @@ export default function PaidAdsHero() {
                 Ready to scale your <span className="text-blue-500">brand</span>
               </motion.span>
               <motion.span className="block" variants={lineVariants}>
-                with paid ads?
+                with meta ads?
               </motion.span>
             </motion.h1>
 
@@ -133,7 +133,7 @@ export default function PaidAdsHero() {
                 type: "spring",
                 stiffness: 120,
               }}
-              href="https://cal.com/anson-stephan/30min"
+              href="https://cal.com/anmolsharma777/30min"
               className="font-heading group mt-8 inline-flex items-center gap-3 bg-blue-400 text-black font-bold py-2 px-5 sm:px-6 rounded-full text-base sm:text-lg hover:bg-white transition-all duration-300 shadow-lg shadow-blue-400/20"
             >
               <img
@@ -151,7 +151,7 @@ export default function PaidAdsHero() {
               transition={{ delay: 1.0 }}
               className="mt-8 text-sm text-gray-500"
             >
-              Trusted by 50+ brands
+              Trusted by 20+ brands
             </motion.div>
           </div>
         </main>

@@ -124,11 +124,11 @@ export default function Features() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex items-center justify-center"
+            className="flex flex-col items-center justify-center"
           >
             <div
               className="rounded-xl bg-gray-900/40 border border-blue-400/20 shadow-2xl shadow-blue-500/10
-                  w-[260px] sm:w-[300px] md:w-[400px] aspect-square p-3"
+      w-[260px] sm:w-[300px] md:w-[400px] aspect-square p-3"
             >
               <img
                 src="/dashboard.jpg"
@@ -136,6 +136,9 @@ export default function Features() {
                 className="w-full h-full rounded-lg object-cover"
               />
             </div>
+            <p className="mt-2 text-xs text-gray-500 italic">
+              *Image is for reference only
+            </p>
           </motion.div>
         </div>
       </div>
