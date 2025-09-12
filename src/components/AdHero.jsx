@@ -94,7 +94,7 @@ export default function PaidAdsHero() {
                 />
                 <img
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-black"
-                  src="/anmol.jpg"
+                  src="/kanak.jpg"
                   alt="User 4"
                 />
               </div>

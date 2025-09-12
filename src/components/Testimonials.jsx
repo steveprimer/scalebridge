@@ -25,10 +25,10 @@ const testimonials = [
   },
   {
     quote:
-      "ScaleBridge built us a clean landing page that actually gets people to stick around. On top of that, they added an AI chatbot so visitors get answers right away. It feels like we finally have a site that works for us.",
-    name: "Anmol",
-    title: "Founder, FuturoNova",
-    avatar: "/anmol.jpg",
+      "im super happy with my website made by Anson! im so happy with the outcome plus he totally understood my vision and matched it with his creativity, which I absolutely loved. everything turned out not just aesthetic but also super functional and easy to use. couldn’t have asked for a better experience … HIGHLY recommend him to anyone looking for someone who truly listens and executes with excellence!",
+    name: "Kanak",
+    title: "Founder, KLAWS",
+    avatar: "/kanak.jpg",
   },
   {
     quote:

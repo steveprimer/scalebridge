@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
 
 // You would expand this with your actual project data
 const allProjects = [
@@ -80,6 +81,7 @@ const Tag = ({ text }) => (
 const AllCaseStudiesPage = () => {
   return (
     <div className="bg-black text-white min-h-screen">
+      <ScrollToTop />
       <Navbar />
       <main className="max-w-7xl mx-auto py-20 sm:py-24 px-4">
         <motion.div
